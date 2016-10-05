@@ -8,26 +8,33 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Payment Entry Form</title>
 </head>
+<script>
+function inputFormatChecking() {
+	var result = true;
+	
+	return result;
+}
+</script>
 <body>
 	<jsp:include page="header.jsp"/>
 	<p>Please enter your payment method below</p>
-	<form:form modelAttribute="paymentInfo" method="post" action="submitPayment">
+	<form:form modelAttribute="paymentInfo" method="post" action="submitPayment" onsubmit="return inputFormatChecking()">
 		<table>
 			<tr>
 				<td>Credit Card Number:</td>
-				<td><form:input path="creditCardNumber" /></td>
+				<td><form:input id="creditCardNumber" path="creditCardNumber" /></td>
 			</tr>
 			<tr>
 				<td>Expiration Date:</td>
-				<td><form:input path="expirationDate" /></td>
+				<td><form:input id="expirationDate" path="expirationDate" /></td>
 			</tr>
 			<tr>	
 				<td>CVV Code:</td>
-				<td><form:input path="cvvCode" /></td>
+				<td><form:input id="cvvCode" path="cvvCode" /></td>
 			</tr>
 			<tr>
 				<td>Card Holder Name:</td>
-				<td><form:input path="cardHolderName" /></td>
+				<td><form:input id="cardHolderName" path="cardHolderName" /></td>
 			</tr>
 			<tr>
 				<td colspan="2">

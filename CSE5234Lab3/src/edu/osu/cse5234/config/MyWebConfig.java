@@ -18,11 +18,12 @@ public class MyWebConfig extends WebMvcConfigurerAdapter{
 		registry.jsp("/WEB-INF/jsp/", ".jsp");
 	}
 	
-	// For lab 4
+	// For lab 3
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/css/*").addResourceLocations("/css/");
 		registry.addResourceHandler("/images/*").addResourceLocations("/images/");
+		registry.addResourceHandler("/js/*").addResourceLocations("/js/");
 	}
 	
 }

@@ -5,32 +5,33 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/orderentryformstyle.css" >
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Order Entry Form</title>
 </head>
 <body>
-
 <form:form modelAttribute="order" method="post" action="purchase/submitItems">
 	<table>
 		<tr>
 			<th>No.</th>
 			<th>Name</th>
-			<td>Quantity</td>
+			<th>Price</th>
+			<th>Quantity</th>
 		</tr>
 		<c:forEach items="${order.itemList}" var="item" varStatus="status">
 			<tr>
-				<td align="center">${status.count}</td>
+				<td>${status.count}</td>
 				<td><input name="itemList[${status.index}].name" value="${item.name}" /></td>
+				<td><input name="itemList[${status.index}].price" value="${item.price}" /></td>
 				<td><input name="itemList[${status.index}].quantity" value="${item.quantity}" /></td>
 			</tr>
 		</c:forEach>
 		<tr>
-			<td align="center" colspan="3">
+			<td colspan="4">
 				<input type="submit" value="Submit" />
 			</td>
 		</tr>
 	</table>
 </form:form>
-
 </body>
 </html>
