@@ -1,0 +1,30 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	text-align: center;
+}
+
+h1 {
+	font-szie: 25px;
+	text-align: center;
+	background-color: #ffffff;
+	color: #ffff00;
+}
+
+h2 {
+	font-szie: 20px;
+	text-align: center;
+	background-color: #ffffff;
+	color: #00ff40;
+}
+
+.stub {
+	padding: 15px;
+	width: 100%;
+	text-align: center;
+	background-color: #ff8000;
+	color: #00ffff;
+}
