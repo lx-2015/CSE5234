@@ -55,7 +55,7 @@ public class InventoryServiceBean implements InventoryService {
 	public boolean updateInventory(Collection<Item> items) {
 		// Update the inventory
 		for (Item orderItem : items) {
-			//System.out.println(orderItem.getName() + " " + orderItem.isSelected());
+			System.out.println(orderItem.getName() + ". Selected: " + orderItem.isSelected());
 			//if (orderItem.isSelected()) {
 			if (Integer.parseInt(orderItem.getQuantity()) > 0) {
 				for (Item inventoryItem : itemList) {
@@ -63,7 +63,7 @@ public class InventoryServiceBean implements InventoryService {
 						int orderQuantity = Integer.parseInt(orderItem.getQuantity());
 						int inventoryQuantity =  Integer.parseInt(inventoryItem.getQuantity());
 						inventoryItem.setQuantity(String.valueOf(inventoryQuantity - orderQuantity));
-						System.out.println(inventoryItem.getName() + " New quantity is " +  inventoryItem.getQuantity());
+						System.out.println(inventoryItem.getName() + ". New quantity: " +  inventoryItem.getQuantity());
 					}
 				}
 			}

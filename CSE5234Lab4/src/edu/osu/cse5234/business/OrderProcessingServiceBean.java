@@ -24,10 +24,8 @@ public class OrderProcessingServiceBean {
     }
 
     public String processOrder(Order order) {
-    	System.out.println("before");
     	InventoryService inventoryService = ServiceLocator.getInventoryService();
     	inventoryService.updateInventory(order.getItemList());
-    	System.out.println("after");
     	// Generate a random number for the confirmation code
     	int max = 9999999;
     	int min = 1000000;

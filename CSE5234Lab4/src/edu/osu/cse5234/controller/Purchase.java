@@ -69,11 +69,12 @@ public class Purchase {
 	}
 	
 	@RequestMapping(path = "/confirmOrder", method = RequestMethod.POST)
-	public String confirmOrder(@ModelAttribute("order") Order order, HttpServletRequest request) {
-		Order order1 = (Order)request.getSession().getAttribute("order");
-		request.getSession().setAttribute("order", order);
+	//public String confirmOrder(@ModelAttribute("order") Order order, HttpServletRequest request) {
+	public String confirmOrder(HttpServletRequest request) {
+		Order order = (Order)request.getSession().getAttribute("order");
+		//request.getSession().setAttribute("order", order);
 		OrderProcessingServiceBean orderProcessingServiceBean = ServiceLocator.getOrderProcessingService();
-		String confirmationCode = orderProcessingServiceBean.processOrder(order1);
+		String confirmationCode = orderProcessingServiceBean.processOrder(order);
 		request.getSession().setAttribute("confirmationCode", confirmationCode);
 		return "redirect:/purchase/confirmation";
 	}

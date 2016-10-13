@@ -9,8 +9,8 @@
 </head>
 <body>
 	<jsp:include page="header.jsp" />
-	<p class="paragraph">Congratulations! Your Order Is Placed!</p>
-	<p>Your order confirmation code is: "${confirmationCode}"</p>
+	<p id="congratulations">Congratulations! Your Order Is Placed!</p>
+	<p id="confirmationCode">Your order confirmation code is: "${confirmationCode}"</p>
 	<jsp:include page="footer.jsp" />
 </body>
 </html>
