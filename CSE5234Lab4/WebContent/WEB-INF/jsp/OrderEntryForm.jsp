@@ -28,7 +28,7 @@
 					<td>${status.count}</td> 
 					<td>${item.name}<input type="hidden" name="itemList[${status.index}].name" value="${item.name}" /></td>
 					<td>${item.price}<input type="hidden" name="itemList[${status.index}].price" value="${item.price}" /></td>
-					<td><input type="checkbox" name="itemList[${status.index}].selected" value="${item.selected}" /></td>
+					<td><input type="checkbox" name="itemList[${status.index}].selected" value=true /></td>
 					<td><input id="quantity${status.count}" name="itemList[${status.index}].quantity" value="${item.quantity}" onchange="quantityFormatChecking(${status.count})"/></td>
 				</tr>
 			</c:forEach>
