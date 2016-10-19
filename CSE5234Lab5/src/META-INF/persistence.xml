@@ -4,6 +4,7 @@
 		<jta-data-source>jdbc/h2</jta-data-source>
 		<class>edu.osu.cse5234.controller.Order</class>
 		<class>edu.osu.cse5234.controller.PaymentInfo</class>
+		<class>edu.osu.cse5234.controller.ShippingInfo</class>
 		<properties>
 			<property name="eclipselink.target-database" value="org.eclipse.persistence.platform.database.H2Platform"/>
 			<property name="eclipselink.weaving" value="false"/>

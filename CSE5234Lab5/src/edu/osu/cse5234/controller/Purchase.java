@@ -93,9 +93,10 @@ public class Purchase {
 	
 	@RequestMapping(path = "/submitShipping", method = RequestMethod.POST)
 	public String submitShipping(@ModelAttribute("shippingInfo") ShippingInfo shippingInfo, HttpServletRequest request) throws Exception {
-		request.getSession().setAttribute("shippingInfo", shippingInfo);
 		Order order = (Order)request.getSession().getAttribute("order");
+		request.getSession().setAttribute("shippingInfo", shippingInfo);
 		order.setShippingInfo(shippingInfo);
+		shippingInfo.setOrder(order);
 		request.getSession().setAttribute("order", order);
 		return "redirect:/purchase/viewOrder";
 	}

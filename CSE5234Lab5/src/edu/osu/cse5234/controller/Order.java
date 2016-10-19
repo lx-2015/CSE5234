@@ -119,4 +119,15 @@ public class Order implements Serializable {
 	public void setShippingInfo(ShippingInfo shippingInfo) {
 		this.shippingInfo = shippingInfo;
 	}
+	
+	@PrePersist
+	public void prePersistCallBack() {
+		if (paymentInfo != null) {
+			paymentInfo.setCustomerOrderId(this.id);
+		}
+		
+		if (shippingInfo != null) {
+			shippingInfo.setCustomerOrderId(this.id);
+		}
+	}
 }
