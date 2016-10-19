@@ -31,9 +31,8 @@ public class Order implements Serializable {
 	@Transient
 	private List<LineItem> lineItemList;
 	
-	//@OneToOne(cascade = CascadeType.ALL)
-	//@JoinColumn(name="CUSTOMER_ORDER_ID_FK", insertable=false, updatable=false)
-	@Transient
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="CUSTOMER_ORDER_ID_FK", insertable=false, updatable=false)
 	private PaymentInfo paymentInfo;
 	
 	//@OneToOne(cascade = CascadeType.ALL)
@@ -57,9 +56,6 @@ public class Order implements Serializable {
 		this.selected = selected;
 	}
 	
-	//@Id
-	//@GeneratedValue(strategy = GenerationType.IDENTITY)
-	//@Column(name = "ID")
 	public int getId() {
 		return id;
 	}
@@ -68,7 +64,6 @@ public class Order implements Serializable {
 		this.id = id;
 	}
 
-	//@Column(name = "CUSTOMER_NAME")
 	public String getCustomerName() {
 		return customerName;
 	}
@@ -77,7 +72,6 @@ public class Order implements Serializable {
 		this.customerName = customerName;
 	}
 
-	//@Column(name = "CUSTOMER_EMAIL")
 	public String getEmailAddress() {
 		return emailAddress;
 	}
@@ -86,7 +80,6 @@ public class Order implements Serializable {
 		this.emailAddress = emailAddress;
 	}
 
-	//@Column(name = "STATUS")
 	public String getStatus() {
 		return status;
 	}
@@ -95,7 +88,6 @@ public class Order implements Serializable {
 		this.status = status;
 	}
 
-	//@Transient
 	public List<LineItem> getLineItemList() {
 		return lineItemList;
 	}
@@ -104,7 +96,6 @@ public class Order implements Serializable {
 		this.lineItemList = lineItemList;
 	}
 
-	//@Transient
 	public boolean isSelected() {
 		return selected;
 	}
@@ -112,8 +103,7 @@ public class Order implements Serializable {
 	public void setSelected(boolean selected) {
 		this.selected = selected;
 	}
-	
-	//@Transient
+
 	public PaymentInfo getPaymentInfo() {
 		return paymentInfo;
 	}
@@ -122,7 +112,6 @@ public class Order implements Serializable {
 		this.paymentInfo = paymentInfo;
 	}
 
-	//@Transient
 	public ShippingInfo getShippingInfo() {
 		return shippingInfo;
 	}

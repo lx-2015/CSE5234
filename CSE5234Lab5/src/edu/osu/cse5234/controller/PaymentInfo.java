@@ -4,30 +4,41 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
-//@Entity
-//@Table(name = "PAYMENT_INFO")
+@Entity
+@Table(name = "PAYMENT_INFO")
 public class PaymentInfo implements Serializable {
 
 	private static final long serialVersionUID = 4718393482552017677L;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID")
 	private int id;
+	
+	@Column(name = "CREDIT_CARD_NUMBER")
 	private String creditCardNumber;
+	
+
+	@Column(name = "EXPIRATION_DATE")
 	private String expirationDate;
+	
+	@Column(name = "CVV_CODE")
 	private String cvvCode;
+	
+	@Column(name = "CARD_HOLDER_NAME")
 	private String cardHolderName;
 	
+	@Column(name = "CUSTOMER_ORDER_ID_FK")
 	private int customerOrderId;
-	//@OneToOne(cascade = CascadeType.ALL)
-	//@JoinColumn(name="CUSTOMER_ORDER_ID_FK", insertable=false, updatable=false)
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="ID", insertable=false, updatable=false)
 	private Order order;
 	
 	public PaymentInfo() {
 
 	}
 
-	//@Id
-	//@GeneratedValue(strategy = GenerationType.IDENTITY)
-	//@Column(name = "ID")
 	public int getId() {
 		return id;
 	}
@@ -36,7 +47,6 @@ public class PaymentInfo implements Serializable {
 		this.id = id;
 	}
 
-	//@Column(name = "CREDIT_CARD_NUMBER")
 	public String getCreditCardNumber() {
 		return creditCardNumber;
 	}
@@ -45,7 +55,6 @@ public class PaymentInfo implements Serializable {
 		this.creditCardNumber = creditCardNumber;
 	}
 
-	//@Column(name = "EXPIRATION_DATE")
 	public String getExpirationDate() {
 		return expirationDate;
 	}
@@ -54,7 +63,6 @@ public class PaymentInfo implements Serializable {
 		this.expirationDate = expirationDate;
 	}
 
-	//@Column(name = "CVV_CODE")
 	public String getCvvCode() {
 		return cvvCode;
 	}
@@ -63,7 +71,6 @@ public class PaymentInfo implements Serializable {
 		this.cvvCode = cvvCode;
 	}
 
-	//@Column(name = "CARD_HOLDER_NAME")
 	public String getCardHolderName() {
 		return cardHolderName;
 	}
@@ -72,7 +79,6 @@ public class PaymentInfo implements Serializable {
 		this.cardHolderName = cardHolderName;
 	}
 
-	//@Column(name = "CUSTOMER_ORDER_ID_FK")
 	public int getCustomerOrderId() {
 		return customerOrderId;
 	}
@@ -80,8 +86,7 @@ public class PaymentInfo implements Serializable {
 	public void setCustomerOrderId(int customerOrderId) {
 		this.customerOrderId = customerOrderId;
 	}
-	
-	//@Transient
+
 	public Order getOrder() {
 		return order;
 	}
