@@ -29,7 +29,7 @@ public class OrderProcessingServiceBean {
 
     public String processOrder(Order order) {
     	InventoryService inventoryService = ServiceLocator.getInventoryService();
-    	//inventoryService.updateInventory(order.getLineItemList());
+    	inventoryService.updateInventory(order.getLineItemList());
     	entityManager.persist(order);
     	entityManager.flush();
     	// Generate a random number for the confirmation code

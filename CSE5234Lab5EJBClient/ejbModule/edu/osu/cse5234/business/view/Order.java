@@ -126,4 +126,14 @@ public class Order implements Serializable {
 			shippingInfo.setCustomerOrderId(this.id);
 		}
 	}
+	
+	public void removeZeroQuantityItems() {
+		List<LineItem> newLineItemList = new ArrayList<LineItem>();
+		for (LineItem lineItem : lineItemList) {
+			if (lineItem.getQuantity() > 0) {
+				newLineItemList.add(lineItem);
+			}
+		}
+		lineItemList = newLineItemList;
+	}
 }

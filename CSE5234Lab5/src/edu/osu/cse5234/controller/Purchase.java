@@ -61,6 +61,7 @@ public class Purchase {
 		Order order1 = (Order)request.getSession().getAttribute("order");
 		order.setCustomerName(order1.getCustomerName());
 		order.setEmailAddress(order1.getEmailAddress());
+		order.removeZeroQuantityItems();
 		request.getSession().setAttribute("order", order);
 		OrderProcessingServiceBean orderProcessingServiceBean = ServiceLocator.getOrderProcessingService();
 		if (orderProcessingServiceBean.validateItemAvailability(order)) {
