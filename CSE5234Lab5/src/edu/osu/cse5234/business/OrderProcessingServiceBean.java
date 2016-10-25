@@ -8,7 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import edu.osu.cse5234.business.view.InventoryService;
-import edu.osu.cse5234.controller.Order;
+import edu.osu.cse5234.business.view.Order;
 import edu.osu.cse5234.util.ServiceLocator;
 
 /**

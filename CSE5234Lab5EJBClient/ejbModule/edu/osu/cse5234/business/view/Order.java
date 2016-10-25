@@ -1,11 +1,9 @@
-package edu.osu.cse5234.controller;
+package edu.osu.cse5234.business.view;
 
 import java.io.Serializable;
 import java.util.*;
 
 import javax.persistence.*;
-
-import edu.osu.cse5234.business.view.LineItem;
 
 @Entity
 @Table(name = "CUSTOMER_ORDER")
@@ -26,18 +24,16 @@ public class Order implements Serializable {
 	@Column(name = "STATUS")
 	private String status;
 	
-	//@OneToMany(cascade = CascadeType.ALL)
-	//@JoinColumn(name="CUSTOMER_ORDER_ID_FK")
-	@Transient
+	@OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+	@JoinColumn(name="CUSTOMER_ORDER_ID_FK", insertable=false, updatable=false)
 	private List<LineItem> lineItemList;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
 	@JoinColumn(name="CUSTOMER_ORDER_ID_FK", insertable=false, updatable=false)
 	private PaymentInfo paymentInfo;
 	
-	//@OneToOne(cascade = CascadeType.ALL)
-	//@JoinColumn(name="CUSTOMER_ORDER_ID_FK", insertable=false, updatable=false)
-	@Transient
+	@OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
+	@JoinColumn(name="CUSTOMER_ORDER_ID_FK", insertable=false, updatable=false)
 	private ShippingInfo shippingInfo;
 	
 	@Transient

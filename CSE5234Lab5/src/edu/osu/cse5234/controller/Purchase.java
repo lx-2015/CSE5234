@@ -16,6 +16,9 @@ import edu.osu.cse5234.business.view.Inventory;
 import edu.osu.cse5234.business.view.InventoryService;
 import edu.osu.cse5234.business.view.Item;
 import edu.osu.cse5234.business.view.LineItem;
+import edu.osu.cse5234.business.view.Order;
+import edu.osu.cse5234.business.view.PaymentInfo;
+import edu.osu.cse5234.business.view.ShippingInfo;
 import edu.osu.cse5234.util.ServiceLocator;
 
 @Controller

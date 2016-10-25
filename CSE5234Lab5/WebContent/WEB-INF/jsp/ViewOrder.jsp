@@ -3,10 +3,10 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.List" %>
-<%@ page import="edu.osu.cse5234.controller.Order" %>
+<%@ page import="edu.osu.cse5234.business.view.Order" %>
 <%@ page import="edu.osu.cse5234.business.view.LineItem" %>
-<%@ page import="edu.osu.cse5234.controller.PaymentInfo" %>
-<%@ page import="edu.osu.cse5234.controller.ShippingInfo" %>
+<%@ page import="edu.osu.cse5234.business.view.PaymentInfo" %>
+<%@ page import="edu.osu.cse5234.business.view.ShippingInfo" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
