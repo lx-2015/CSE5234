@@ -10,32 +10,35 @@ public class LineItem implements Serializable{
 
 	private static final long serialVersionUID = -692455854174445341L;
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID")
+	//@Id
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
+	//@Column(name = "ID")
 	private int id;
 	
-	@Column(name = "ITEM_ID")
+	//@Column(name = "ITEM_ID")
 	private int itemNumber;
 	
-	@Column(name = "ITEM_NAME")
+	//@Column(name = "ITEM_NAME")
 	private String name;
 	
-	@Column(name = "QUANTITY")
+	//@Column(name = "QUANTITY")
 	private int quantity;
 	
-	@Column(name = "CUSTOMER_ORDER_ID_FK")
-	private int customerOrderId;
+	//@Column(name = "CUSTOMER_ORDER_ID_FK")
+	//@Transient
+	//private int customerOrderId;
 	
-	@Transient
+	//@Transient
 	private String description;
 	
-	@Transient
+	//@Transient
 	private double price;
 	
+	/*
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="ID", insertable=false, updatable=false)
 	private Order order;
+	*/
 	
 	public LineItem() {
 
@@ -49,9 +52,12 @@ public class LineItem implements Serializable{
 		
 		description = item.getDescription();
 		price = item.getPrice();
-		order = null;
+		//order = null;
 	}
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID")
 	public int getId() {
 		return id;
 	}
@@ -60,6 +66,7 @@ public class LineItem implements Serializable{
 		this.id = id;
 	}
 
+	@Column(name = "ITEM_ID")
 	public int getItemNumber() {
 		return itemNumber;
 	}
@@ -68,6 +75,7 @@ public class LineItem implements Serializable{
 		this.itemNumber = itemNumber;
 	}
 
+	@Column(name = "ITEM_NAME")
 	public String getName() {
 		return name;
 	}
@@ -76,6 +84,7 @@ public class LineItem implements Serializable{
 		this.name = name;
 	}
 
+	@Column(name = "QUANTITY")
 	public int getQuantity() {
 		return quantity;
 	}
@@ -84,6 +93,9 @@ public class LineItem implements Serializable{
 		this.quantity = quantity;
 	}
 
+	//@Column(name = "CUSTOMER_ORDER_ID_FK")
+	//@Transient
+	/*
 	public int getCustomerOrderId() {
 		return customerOrderId;
 	}
@@ -91,7 +103,8 @@ public class LineItem implements Serializable{
 	public void setCustomerOrderId(int customerOrderId) {
 		this.customerOrderId = customerOrderId;
 	}
-
+	 */
+	@Transient
 	public String getDescription() {
 		return description;
 	}
@@ -100,6 +113,7 @@ public class LineItem implements Serializable{
 		this.description = description;
 	}
 
+	@Transient
 	public double getPrice() {
 		return price;
 	}
@@ -108,6 +122,7 @@ public class LineItem implements Serializable{
 		this.price = price;
 	}
 	
+	/*
 	public Order getOrder() {
 		return order;
 	}
@@ -115,4 +130,5 @@ public class LineItem implements Serializable{
 	public void setOrder(Order order) {
 		this.order = order;
 	}
+	*/
 }
