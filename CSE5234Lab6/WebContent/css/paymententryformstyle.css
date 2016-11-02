@@ -1,0 +1,38 @@
+@CHARSET "ISO-8859-1";
+
+html {
+	color: #2E2E2E;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #F2F2F2;
+	max-width: 980px;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+table {
+	width: 80%;
+	margin-top: 20px;
+	border:1pt solid #808080;
+	margin-left: auto;
+	margin-right: auto; 
+}
+
+th {
+	color: #424242;
+	border:1pt solid #808080;
+	text-align: center;
+	background-color: #00ffff;
+}
+
+
+td {
+	height: 30px;
+	color: #424242;
+	border:1pt solid #808080;
+	text-align: center;
+	background-color: #c0c0c0;
+}

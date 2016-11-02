@@ -1,0 +1,21 @@
+@CHARSET "ISO-8859-1";
+
+html {
+	color: #2E2E2E;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #F2F2F2;
+	max-width: 980px;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+#congratulations, #confirmationCode {
+	font-szie: 25px;
+	text-align: center;
+	background-color: #ffffff;
+	color: #ff8040;
+}
