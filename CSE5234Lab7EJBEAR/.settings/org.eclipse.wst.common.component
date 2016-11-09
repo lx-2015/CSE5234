@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="CSE5234Lab7EJBEAR">
+        <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+        <dependent-module archiveName="CSE5234Lab7EJB.jar" deploy-path="/" handle="module:/resource/CSE5234Lab7EJB/CSE5234Lab7EJB">
+            <dependent-object>Module_1478543977696</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CSE5234Lab7EJBClient.jar" deploy-path="/" handle="module:/resource/CSE5234Lab7EJBClient/CSE5234Lab7EJBClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
