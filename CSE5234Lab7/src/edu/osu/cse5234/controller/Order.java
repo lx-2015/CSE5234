@@ -24,7 +24,7 @@ public class Order implements Serializable {
 	private String emailAddress;
 	
 	//@Column(name = "STATUS")
-	private String status;
+	private String status = "New";
 	
 	////@OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
 	//@OneToMany(cascade = CascadeType.ALL)

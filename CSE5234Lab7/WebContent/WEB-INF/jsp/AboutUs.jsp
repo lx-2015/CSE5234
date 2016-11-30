@@ -27,19 +27,25 @@
 			<td width= 450px>A second year Computer Science master student from the Ohio State University</td>
 		</tr>
 		<tr>
-			<td>Senyang Hu</td>
+			<td><img src="${pageContext.request.contextPath}/images/IMG_4406.JPG" 
+				class="image"/><br />
+				Senyang Hu</td>
 			<td >hu.993@buckeyemail.osu.edu</td>
 			<td>Co-founder, software developer</td>
 			<td width= 450px>A second year Computer Science master student from the Ohio State University</td>
 		</tr>
 		<tr>
-			<td>Xiaojing Lin</td>
+			<td><img src="${pageContext.request.contextPath}/images/IMG_2230.JPG" 
+				class="image"/><br />
+				Xiaojing Lin</td>
 			<td >lin.2356@buckeyemail.osu.edu</td>
 			<td>Co-founder, software developer</td>
 			<td width= 450px>A second year Computer Science master student from the Ohio State University</td>
 		</tr>
 		<tr>
-			<td>Shengjie Quan</td>
+			<td><img src="${pageContext.request.contextPath}/images/800800.jpg" 
+				class="image"/><br />
+				Shengjie Quan</td>
 			<td >quan.48@buckeyemail.osu.edu</td>
 			<td>Co-founder, software developer</td>
 			<td width= 450px>A senior undergraduate Computer Science student from the Ohio State University</td>
